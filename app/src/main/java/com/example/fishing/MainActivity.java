@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.fishing.ui.login.LoginActivity;
 
 public class MainActivity extends AppCompatActivity {
     private Button Login;
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
     // Create a method to open the LoginActivity.
     public void openLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
 }
