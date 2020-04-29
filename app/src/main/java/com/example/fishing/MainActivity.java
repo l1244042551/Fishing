@@ -22,12 +22,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Open the Login Layout.
-                openLoginActivity();
+                openGameActivity();
             }
         });
     }
     // Create a method to open the LoginActivity.
-    public void openLoginActivity() {
+    public void openGameActivity() {
         Intent intent = new Intent(this, GameActivity.class);
         startActivity(intent);
     }
