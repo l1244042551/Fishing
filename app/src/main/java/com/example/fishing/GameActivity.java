@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity {
         lake = findViewById(R.id.Lake);
         waterfall = findViewById(R.id.Waterfall);
         sea = findViewById(R.id.Sea);
-        undecided = findViewById(R.id.undecided);
+        undecided = findViewById(R.id.Snow);
         lake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
