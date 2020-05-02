@@ -11,7 +11,7 @@ public class GameActivity extends AppCompatActivity {
     private Button lake;
     private Button waterfall;
     private Button sea;
-    private Button undecided;
+    private Button snow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +22,7 @@ public class GameActivity extends AppCompatActivity {
         lake = findViewById(R.id.Lake);
         waterfall = findViewById(R.id.Waterfall);
         sea = findViewById(R.id.Sea);
-        undecided = findViewById(R.id.Snow);
+        snow = findViewById(R.id.Snow);
         lake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,10 +41,10 @@ public class GameActivity extends AppCompatActivity {
                 openSeaMap();
             }
         });
-        undecided.setOnClickListener(new View.OnClickListener() {
+        snow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openUndecidedMap();
+                openSnowMap();
             }
         });
     }
@@ -60,8 +60,8 @@ public class GameActivity extends AppCompatActivity {
         Intent waterfallMap = new Intent(GameActivity.this, WaterfallActivity.class);
         startActivity(waterfallMap);
     }
-    public void openUndecidedMap() {
-        Intent undecidedMap = new Intent(GameActivity.this, UndecidedActivity.class);
-        startActivity(undecidedMap);
+    public void openSnowMap() {
+        Intent snowMap = new Intent(GameActivity.this, SnowActivity.class);
+        startActivity(snowMap);
     }
 }
