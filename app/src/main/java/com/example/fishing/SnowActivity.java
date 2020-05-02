@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
 
+import java.util.Random;
+
 public class SnowActivity extends AppCompatActivity {
     private Button spot00;
     private Button spot01;
@@ -18,6 +20,8 @@ public class SnowActivity extends AppCompatActivity {
     private Button spot20;
     private Button spot21;
     private Button spot22;
+
+    private boolean condition[][] = new boolean[3][3];
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +37,16 @@ public class SnowActivity extends AppCompatActivity {
         spot21 = findViewById(R.id.Spot21);
         spot22 = findViewById(R.id.Spot22);
         caught(false);
+
+        createFish();
     }
+
+    private void createFish() {
+        int fishLocationX = new Random().nextInt(3);
+        int fishLocationY = new Random().nextInt(3);
+        condition[fishLocationX][fishLocationY] = true;
+    }
+    
     public void caught(boolean caught) {
         if (caught) {
             AlertDialog.Builder success = new AlertDialog.Builder(this);
