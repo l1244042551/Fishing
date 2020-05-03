@@ -46,7 +46,7 @@ public class SnowActivity extends AppCompatActivity {
         int fishLocationY = new Random().nextInt(3);
         condition[fishLocationX][fishLocationY] = true;
     }
-    
+
     public void caught(boolean caught) {
         if (caught) {
             AlertDialog.Builder success = new AlertDialog.Builder(this);
