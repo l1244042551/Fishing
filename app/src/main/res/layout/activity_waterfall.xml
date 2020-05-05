@@ -19,10 +19,11 @@
         app:srcCompat="@drawable/lll" />
 
     <Button
-        android:id="@+id/button10"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf02"
         android:layout_width="122dp"
         android:layout_height="118dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
@@ -31,10 +32,11 @@
         app:layout_constraintVertical_bias="0.208" />
 
     <Button
-        android:id="@+id/button11"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf12"
         android:layout_width="124dp"
         android:layout_height="116dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -43,12 +45,13 @@
         app:layout_constraintVertical_bias="0.208" />
 
     <Button
-        android:id="@+id/button12"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf22"
         android:layout_width="118dp"
         android:layout_height="117dp"
         android:layout_marginStart="264dp"
         android:layout_marginLeft="264dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
@@ -56,10 +59,11 @@
         app:layout_constraintVertical_bias="0.206" />
 
     <Button
-        android:id="@+id/button13"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf01"
         android:layout_width="126dp"
         android:layout_height="116dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.042"
@@ -67,21 +71,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button14"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf11"
         android:layout_width="123dp"
         android:layout_height="117dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="@+id/imageView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView8"
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <Button
-        android:id="@+id/button15"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf21"
         android:layout_width="124dp"
         android:layout_height="121dp"
         android:layout_marginBottom="224dp"
-        android:text="Button"
+        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
@@ -90,10 +96,41 @@
         app:layout_constraintVertical_bias="0.79" />
 
     <Button
-        android:id="@+id/button16"
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf00"
         android:layout_width="128dp"
         android:layout_height="114dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="486dp" />
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf10"
+        android:layout_width="126dp"
+        android:layout_height="114dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.787" />
+
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:id="@+id/wf20"
+        android:layout_width="122dp"
+        android:layout_height="113dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView8"
+        app:layout_constraintVertical_bias="0.788" />
 </androidx.constraintlayout.widget.ConstraintLayout>
