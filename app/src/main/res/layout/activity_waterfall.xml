@@ -82,18 +82,17 @@
         app:layout_constraintTop_toTopOf="@+id/imageView8" />
 
     <Button
-        android:background="?android:attr/selectableItemBackground"
         android:id="@+id/wf21"
         android:layout_width="124dp"
         android:layout_height="121dp"
-        android:layout_marginBottom="224dp"
+        android:background="?android:attr/selectableItemBackground"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.972"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintVertical_bias="0.504" />
 
     <Button
         android:background="?android:attr/selectableItemBackground"

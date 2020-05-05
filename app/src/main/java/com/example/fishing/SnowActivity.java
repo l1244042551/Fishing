@@ -3,8 +3,13 @@ package com.example.fishing;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.media.MediaPlayer;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.PopupMenu;
@@ -21,8 +26,10 @@ public class SnowActivity extends AppCompatActivity {
     private Button spot20;
     private Button spot21;
     private Button spot22;
+    private Vibrator vibrator;
     private MediaPlayer soundNear;
     private MediaPlayer soundCaught;
+    private int count = 2;
     private boolean condition[][] = new boolean[3][3];
 
     @Override
@@ -35,7 +42,8 @@ public class SnowActivity extends AppCompatActivity {
         spot00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[0][0]);
+                caught(condition[0][0], count);
+                count--;
             }
         });
         spot01 = findViewById(R.id.Spot01);
@@ -43,7 +51,8 @@ public class SnowActivity extends AppCompatActivity {
         spot01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[0][1]);
+                caught(condition[0][1], count);
+                count--;
             }
         });
         spot02 = findViewById(R.id.Spot02);
@@ -51,7 +60,8 @@ public class SnowActivity extends AppCompatActivity {
         spot02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[0][2]);
+                caught(condition[0][2], count);
+                count--;
             }
         });
         spot10 = findViewById(R.id.Spot10);
@@ -59,7 +69,8 @@ public class SnowActivity extends AppCompatActivity {
         spot10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[1][0]);
+                caught(condition[1][0], count);
+                count--;
             }
         });
         spot11 = findViewById(R.id.Spot11);
@@ -67,7 +78,8 @@ public class SnowActivity extends AppCompatActivity {
         spot11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[1][1]);
+                caught(condition[1][1], count);
+                count--;
             }
         });
         spot12 = findViewById(R.id.Spot12);
@@ -75,7 +87,8 @@ public class SnowActivity extends AppCompatActivity {
         spot12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[1][2]);
+                caught(condition[1][2], count);
+                count--;
             }
         });
         spot20 = findViewById(R.id.Spot20);
@@ -83,7 +96,8 @@ public class SnowActivity extends AppCompatActivity {
         spot20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[2][0]);
+                caught(condition[2][0], count);
+                count--;
             }
         });
         spot21 = findViewById(R.id.Spot21);
@@ -91,7 +105,8 @@ public class SnowActivity extends AppCompatActivity {
         spot21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[2][1]);
+                caught(condition[2][1], count);
+                count--;
             }
         });
         spot22 = findViewById(R.id.Spot22);
@@ -99,7 +114,8 @@ public class SnowActivity extends AppCompatActivity {
         spot22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                caught(condition[2][2]);
+                caught(condition[2][2], count);
+                count--;
             }
         });
         soundNear = MediaPlayer.create(this, R.raw.s1);
@@ -112,17 +128,50 @@ public class SnowActivity extends AppCompatActivity {
         condition[fishLocationX][fishLocationY] = true;
     }
 
-    public void caught(boolean caught) {
+    public void caught(boolean caught, int times) {
         if (caught) {
             soundCaught.start();
             AlertDialog.Builder success = new AlertDialog.Builder(this);
             success.setMessage("Congratulations! You have caught this fish");
+            success.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    Intent intent = new Intent(SnowActivity.this, GameActivity.class);
+                    startActivity(intent);
+                }
+            });
             success.create().show();
+            vibrator = (Vibrator) getSystemService(VIBRATOR_SERVICE);
+            if (Build.VERSION.SDK_INT >= 26) {
+                vibrator.vibrate(VibrationEffect.createOneShot(200, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                vibrator.vibrate(200);
+            }
         } else {
             soundNear.start();
             AlertDialog.Builder fail = new AlertDialog.Builder(this);
             fail.setMessage("Oops, the fish got way. Good luck next time!");
             fail.create().show();
+            limit(times);
+        }
+    }
+    public void limit(int times) {
+        if (times == 0) {
+            AlertDialog.Builder end = new AlertDialog.Builder(this);
+            end.setMessage("The fish got away, better luck next game!");
+            end.setOnDismissListener(new DialogInterface.OnDismissListener() {
+                @Override
+                public void onDismiss(DialogInterface dialog) {
+                    Intent intent = new Intent(SnowActivity.this, GameActivity.class);
+                    startActivity(intent);
+                }
+            });
+            end.create().show();
+        } else {
+            AlertDialog.Builder remainder = new AlertDialog.Builder(this);
+            String time = Integer.toString(times);
+            remainder.setMessage("You have " + time + " chance left to catch the fish");
+            remainder.create().show();
         }
     }
 }
