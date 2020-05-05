@@ -3,7 +3,9 @@ package com.example.fishing;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -21,6 +23,8 @@ public class LakeActivity extends AppCompatActivity {
     private Button spot21;
     private Button spot22;
 
+    private MediaPlayer soundNear;
+    private MediaPlayer soundCaught;
     private boolean condition[][] = new boolean[3][3];
 
     @Override
@@ -91,6 +95,9 @@ public class LakeActivity extends AppCompatActivity {
                 caught(condition[2][2]);
             }
         });
+
+        soundNear = MediaPlayer.create(this, R.raw.s1);
+        soundCaught = MediaPlayer.create(this, R.raw.s0);
     }
 
     private void createFish() {
@@ -101,10 +108,12 @@ public class LakeActivity extends AppCompatActivity {
 
     public void caught(boolean caught) {
         if (caught) {
+            soundCaught.start();
             AlertDialog.Builder success = new AlertDialog.Builder(this);
             success.setMessage("Congratulations! You have caught this fish");
             success.create().show();
         } else {
+            soundNear.start();
             AlertDialog.Builder fail = new AlertDialog.Builder(this);
             fail.setMessage("Oops, the fish got way. Good luck next time!");
             fail.create().show();
