@@ -33,6 +33,7 @@ public class LakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_lake);
         createFish();
         spot00 = findViewById(R.id.lake00);
+        spot00.setSoundEffectsEnabled(false);
         spot00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,6 +41,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot01 = findViewById(R.id.lake01);
+        spot01.setSoundEffectsEnabled(false);
         spot01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,6 +49,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot02 = findViewById(R.id.lake02);
+        spot02.setSoundEffectsEnabled(false);
         spot02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +57,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot10 = findViewById(R.id.lake10);
+        spot10.setSoundEffectsEnabled(false);
         spot10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +65,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot11 = findViewById(R.id.lake11);
+        spot11.setSoundEffectsEnabled(false);
         spot11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +73,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot12 = findViewById(R.id.lake12);
+        spot12.setSoundEffectsEnabled(false);
         spot12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,6 +81,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot20 = findViewById(R.id.lake20);
+        spot20.setSoundEffectsEnabled(false);
         spot20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,6 +89,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot21 = findViewById(R.id.lake21);
+        spot21.setSoundEffectsEnabled(false);
         spot21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,6 +97,7 @@ public class LakeActivity extends AppCompatActivity {
             }
         });
         spot22 = findViewById(R.id.lake22);
+        spot22.setSoundEffectsEnabled(false);
         spot22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -30,6 +30,7 @@ public class WaterfallActivity extends AppCompatActivity {
         setContentView(R.layout.activity_waterfall);
         createFish();
         spot00 = findViewById(R.id.wf00);
+        spot00.setSoundEffectsEnabled(false);
         spot00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +38,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot01 = findViewById(R.id.wf01);
+        spot01.setSoundEffectsEnabled(false);
         spot01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +46,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot02 = findViewById(R.id.wf02);
+        spot02.setSoundEffectsEnabled(false);
         spot02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +54,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot10 = findViewById(R.id.wf10);
+        spot10.setSoundEffectsEnabled(false);
         spot10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +62,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot11 = findViewById(R.id.wf11);
+        spot11.setSoundEffectsEnabled(false);
         spot11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +70,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot12 = findViewById(R.id.wf12);
+        spot12.setSoundEffectsEnabled(false);
         spot12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +78,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot20 = findViewById(R.id.wf20);
+        spot20.setSoundEffectsEnabled(false);
         spot20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +86,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot21 = findViewById(R.id.wf21);
+        spot21.setSoundEffectsEnabled(false);
         spot21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +94,7 @@ public class WaterfallActivity extends AppCompatActivity {
             }
         });
         spot22 = findViewById(R.id.wf22);
+        spot22.setSoundEffectsEnabled(false);
         spot22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

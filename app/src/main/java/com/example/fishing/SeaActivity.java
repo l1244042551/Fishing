@@ -30,6 +30,7 @@ public class SeaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sea);
         createFish();
         spot00 = findViewById(R.id.button7);
+        spot00.setSoundEffectsEnabled(false);
         spot00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +38,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot01 = findViewById(R.id.button8);
+        spot01.setSoundEffectsEnabled(false);
         spot01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,6 +46,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot02 = findViewById(R.id.button9);
+        spot02.setSoundEffectsEnabled(false);
         spot02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +54,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot10 = findViewById(R.id.button4);
+        spot10.setSoundEffectsEnabled(false);
         spot10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,6 +62,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot11 = findViewById(R.id.button5);
+        spot11.setSoundEffectsEnabled(false);
         spot11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +70,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot12 = findViewById(R.id.button6);
+        spot12.setSoundEffectsEnabled(false);
         spot12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -72,6 +78,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot20 = findViewById(R.id.button);
+        spot20.setSoundEffectsEnabled(false);
         spot20.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -79,6 +86,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot21 = findViewById(R.id.button2);
+        spot21.setSoundEffectsEnabled(false);
         spot21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,6 +94,7 @@ public class SeaActivity extends AppCompatActivity {
             }
         });
         spot22 = findViewById(R.id.button3);
+        spot22.setSoundEffectsEnabled(false);
         spot22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
