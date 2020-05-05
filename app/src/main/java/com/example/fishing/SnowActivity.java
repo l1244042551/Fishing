@@ -102,7 +102,7 @@ public class SnowActivity extends AppCompatActivity {
     public void caught(boolean caught) {
         if (caught) {
             AlertDialog.Builder success = new AlertDialog.Builder(this);
-            success.setMessage("Congratulations! You have caught this ");
+            success.setMessage("Congratulations! You have caught this fish");
             success.create().show();
         } else {
             AlertDialog.Builder fail = new AlertDialog.Builder(this);
